@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+.main-container {
+  position: relative;
+  width: 100%;
+  height: max-content;
+}
+
+.toggle_dark {
+  background-color: black;
+}
+.toggle_light {
+  background-color: white;
+}
+
+.link-active-light {
+  color: #3c73ff;
+  border-top: 2px solid #3c73ff;
+  border-bottom: 2px solid #3c73ff;
+}
+.link-active-dark {
+  color: #0048ff;
+  border-top: 2px solid #0048ff;
+  border-bottom: 2px solid #0048ff;
+}
+.link-noactive {
+  border-bottom: 2px solid transparent;
+}
+
+.header-scrolled-light {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  box-shadow: 0px 1px 3px -5px rgba(0, 0, 0, 0.6);
+}
+
+.header-scrolled-dark {
+  background: rgba(59, 59, 59, 0.3);
+  backdrop-filter: blur(20px);
+
+  box-shadow: 0px 1px 3px -5px rgba(0, 0, 0, 0.6);
+}
+
+.transparent {
+  background: transparent;
+}
+
+.text-main-light {
+  color: #3c73ff;
+}
+.text-main-dark {
+  color: #0048ff;
+}
+.bg-main-light {
+  background-color: #3c73ff;
+}
+.bg-main-dark {
+  background-color: #0048ff;
+}
+.text-dark {
+  color: white;
+}
+.text-light {
+  color: black;
+}
+
+.bg-light {
+  background: white;
+}
+.bg-dark {
+  background: #0e1b31;
+}
+.toggle-light-active {
+  transform: translateY(200%);
+  transition: all 0.5s;
+}
+.toggle-light-noactive {
+  transform: translateY(0%);
+  transition: all 0.5s;
+}
+
+.toggle-dark-active {
+  transform: translateY(0%);
+  transition: all 0.5s;
+}
+.toggle-dark-noactive {
+  transform: translateY(-200%);
+  transition: all 0.5s;
+}
+
+.sidebarShow {
+  visibility: visible;
+  transform: translateX(0);
+}
+.sidebarHide {
+  visibility: hidden;
+  transform: translateX(0);
+}
+.innerSidebarShow {
+  transition: all 0.5s;
+  transform: translateX(0%);
+}
+
+.innerSidebarHide {
+  transition: all 0.5s;
+  transform: translateX(100%);
+}
+
+.sidebarLight {
+  background: white;
+}
+
+.sidebarDark {
+  background: #0e1b31;
+}
+
+.bg-skills-dark {
+  background: #20345b;
+}
+
+/* skills */
+.button-light {
+  border: 2px solid #3c73ff;
+  color: #3c73ff;
+}
+.button-light:hover {
+  border: 2px solid #3c73ff;
+  color: white;
+  background: #3c73ff;
+}
+.button-dark {
+  border: 2px solid #0048ff;
+  color: #0048ff;
+  background: transparent;
+}
+.button-dark:hover {
+  border: 2px solid rgb(0, 72, 255);
+  color: white;
+  background: #0048ff;
+}
+.icon-light {
+  box-shadow: 0px 6px 6px rgba(97, 138, 245, 0.9);
+}
+.icon-dark {
+  box-shadow: 0px 6px 6px rgba(0, 72, 255, 0.9);
+}
+.skills-icon:hover > .icon-light {
+  transform: translateY(-10px);
+
+  box-shadow: 0px 5px 5px 8px rgba(97, 138, 245, 0.9);
+}
+.skills-icon:hover > .icon-dark {
+  transform: translateY(-10px);
+  box-shadow: 0px 5px 5px 8px rgba(0, 72, 255, 0.9);
+}
+
+.portfolio-title-light {
+  color: black;
+  transition: all 0.3s;
+}
+
+.portfolio-title-dark {
+  transition: all 0.3s;
+
+  color: white;
+}
+.portfolio-title-light:hover {
+  color: #3c73ff;
+}
+.portfolio-title-dark:hover {
+  color: #0048ff;
+}
+
+.modalHide {
+  visibility: hidden;
+  transition: all 0.3s;
+  opacity: 0;
+}
+.modalShow {
+  visibility: visible;
+  transition: all 0.3s;
+  opacity: 1;
+}
+.modalContentHide {
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: all 0.3s;
+}
+.modalContentShow {
+  visibility: visible;
+  transform: translateY(0px);
+  transition: all 0.3s;
+}
+
+.custom-scrollbar-light::-webkit-scrollbar,
+.custom-scrollbar-dark::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+
+.custom-scrollbar-light::-webkit-scrollbar-track,
+.custom-scrollbar-dark::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 50px;
+}
+
+.custom-scrollbar-dark::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: #0048ff;
+}
+.custom-scrollbar-light::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: #3c73ff;
+}
+
+.modal-dark {
+  background: rgba(59, 59, 59, 0.3);
+  backdrop-filter: blur(20px);
+}
+
+.modal-light {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+}
+.modal-content-light {
+  background: white;
+}
+.modal-content-dark {
+  background: #0e1b31;
+  color: white;
+}
+.contact-card-light {
+  border: 3px solid #618af5;
+  background: white;
+}
+.contact-card-dark {
+  border: 3px solid #0048ff;
+  background: #20345b;
+}
+.input-light {
+  border: 3px solid #618af5;
+  background: #ffffff;
+  color: black;
+}
+.input-dark {
+  border: 3px solid #0048ff;
+  background: #20345b;
+  color: white;
+}
+.sosmed-icon-light {
+  border: 2px solid #618af5;
+  color: #618af5;
+  transition: all 0.3s;
+}
+.sosmed-icon-light:hover {
+  border: 2px solid white;
+  color: white;
+  background: #618af5;
+}
+.sosmed-icon-dark {
+  border: 2px solid #0048ff;
+  color: #0048ff;
+  transition: all 0.3s;
+}
+.sosmed-icon-dark:hover {
+  border: 2px solid white;
+  color: white;
+  background: #0048ff;
+}
+
+@media (max-width: 575px) {
+  .main-container {
+    padding: 0 15px 40px 15px;
+  }
+}
+@media (min-width: 576px) {
+  .main-container {
+    padding: 0 40px 40px 40px;
+  }
+}
+
+.alert-show {
+  transform: translate(-50%, 0%);
+  transition: all 0.5s ease;
+}
+.alert-hide {
+  transform: translate(-50%, 200%);
+  transition: all 0.5s ease;
+}
+.bg-green {
+  background: rgb(37, 239, 37);
+}
+.bg-red {
+  background: rgb(239, 28, 28);
+}
+
+.is-invalid {
+  border: 3px solid rgb(239, 28, 28);
+}

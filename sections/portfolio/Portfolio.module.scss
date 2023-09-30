@@ -1,0 +1,50 @@
+$main-color: #618af5;
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  padding-top: 95px;
+  height: max-content;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  .portfolio {
+    width: 100%;
+    &__desc {
+      margin-bottom: 40px;
+      font-size: 18px;
+      max-width: 60%;
+    }
+
+    &__content {
+      display: grid;
+      gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio__content {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 576px) {
+  .portfolio__content {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .portfolio__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
