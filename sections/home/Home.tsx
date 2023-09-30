@@ -82,7 +82,7 @@ const Home = () => {
             }`}
           >
             <Image
-              src="/rafi.png"
+              src="/image/rafi.png"
               alt="rafi"
               className={styles.home__image__content__inner}
               width={60}

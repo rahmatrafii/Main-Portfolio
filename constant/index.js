@@ -85,7 +85,7 @@ export const link = [
 export const portfolio = [
   {
     title: "Youtube Clone",
-    src: "/portfolio/youtube.png",
+    src: "/image/youtube.png",
     techStack: ["Nextjs", "TypeScript", "TailwindCSS"],
     link: "https://rafi-youtube-clone.vercel.app/",
     github: "https://github.com/rahmatrafii/youtube-clone",
@@ -93,7 +93,7 @@ export const portfolio = [
   },
   {
     title: "Travel Landing Page",
-    src: "/portfolio/travel.png",
+    src: "/image/travel.png",
     techStack: ["HTML", "CSS", "JavaScript"],
     link: "https://rafi-travel.vercel.app/",
     github: "https://github.com/rahmatrafii/rafi-travel",
@@ -101,7 +101,7 @@ export const portfolio = [
   },
   {
     title: "Aplikasi Pencarian Filem",
-    src: "/portfolio/movie.png",
+    src: "/image/movie.png",
     techStack: ["Nextjs", "TypeScript", "TailwindCSS"],
     link: "https://rafmovies.vercel.app/",
     github: "https://github.com/rahmatrafii/rafi-travel",
@@ -109,7 +109,7 @@ export const portfolio = [
   },
   {
     title: "Aplikasi Pencarian Resep",
-    src: "/portfolio/recipe.png",
+    src: "/image/recipe.png",
     techStack: ["Reactjs", "TailwindCSS"],
     link: "https://rafi-recipe-app.vercel.app/",
     github: "https://github.com/rahmatrafii/rafi-travel",
