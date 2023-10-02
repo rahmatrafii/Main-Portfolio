@@ -14,53 +14,53 @@ export const mySkills = {
   techStack: [
     {
       title: "HTML",
-      src: "/image/html.svg",
+      src: "/static/image/html.svg",
     },
     {
       title: "CSS",
-      src: "/image/css.svg",
+      src: "/static/image/css.svg",
     },
     {
       title: "JavaScript",
-      src: "/image/javascript.svg",
+      src: "/static/image/javascript.svg",
     },
     {
       title: "Reactjs",
-      src: "/image/reactjs.svg",
+      src: "/static/image/reactjs.svg",
     },
     {
       title: "Nextjs",
-      src: "/image/nextjs.svg",
+      src: "/static/image/nextjs.svg",
     },
     {
       title: "TypeScript",
-      src: "/image/typescript.svg",
+      src: "/static/image/typescript.svg",
     },
     {
       title: "TailwindCSS",
-      src: "/image/tailwindcss.svg",
+      src: "/static/image/tailwindcss.svg",
     },
     {
       title: "SASS",
-      src: "/image/sass.svg",
+      src: "/static/image/sass.svg",
     },
   ],
   tools: [
     {
       title: "Git",
-      src: "/image/git.svg",
+      src: "/static/image/git.svg",
     },
     {
       title: "GitHub",
-      src: "/image/github.svg",
+      src: "/static/image/github.svg",
     },
     {
       title: "VS Code",
-      src: "/image/vscode.svg",
+      src: "/static/image/vscode.svg",
     },
     {
       title: "Figma",
-      src: "/image/figma.svg",
+      src: "/static/image/figma.svg",
     },
   ],
 };
@@ -85,7 +85,7 @@ export const link = [
 export const portfolio = [
   {
     title: "Youtube Clone",
-    src: "/image/youtube.png",
+    src: "/static/image/youtube.png",
     techStack: ["Nextjs", "TypeScript", "TailwindCSS"],
     link: "https://rafi-youtube-clone.vercel.app/",
     github: "https://github.com/rahmatrafii/youtube-clone",
@@ -93,7 +93,7 @@ export const portfolio = [
   },
   {
     title: "Travel Landing Page",
-    src: "/image/travel.png",
+    src: "/static/image/travel.png",
     techStack: ["HTML", "CSS", "JavaScript"],
     link: "https://rafi-travel.vercel.app/",
     github: "https://github.com/rahmatrafii/rafi-travel",
@@ -101,7 +101,7 @@ export const portfolio = [
   },
   {
     title: "Aplikasi Pencarian Filem",
-    src: "/image/movie.png",
+    src: "/static/image/movie.png",
     techStack: ["Nextjs", "TypeScript", "TailwindCSS"],
     link: "https://rafmovies.vercel.app/",
     github: "https://github.com/rahmatrafii/rafi-travel",
@@ -109,7 +109,7 @@ export const portfolio = [
   },
   {
     title: "Aplikasi Pencarian Resep",
-    src: "/image/recipe.png",
+    src: "/static/image/recipe.png",
     techStack: ["Reactjs", "TailwindCSS"],
     link: "https://rafi-recipe-app.vercel.app/",
     github: "https://github.com/rahmatrafii/rafi-travel",
@@ -119,19 +119,19 @@ export const portfolio = [
 export const ContactButton = [
   {
     title: "Gmail",
-    icon: "/image/gmail.svg",
+    icon: "/static/image/gmail.svg",
     link: "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=rahmatrafiindrayani@gmail.com&su=&body=",
     body: "rahmatrafiindrayani@gmail.com",
   },
   {
     title: "WhatsApp",
-    icon: "/image/whatsapp.svg",
+    icon: "/static/image/whatsapp.svg",
     link: "https://wa.me/+62881026908422",
     body: "+62 881026908422",
   },
   {
     title: "Telegram",
-    icon: "/image/telegram.svg",
+    icon: "/static/image/telegram.svg",
     link: "https://t.me/+62881026908422",
     body: "+62 881026908422",
   },
