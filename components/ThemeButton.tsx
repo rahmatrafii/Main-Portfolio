@@ -22,7 +22,7 @@ const ThemeButton = ({ theme, onClick = () => {} }: ThemeButtonType) => {
       </button>
       <button>
         <Image
-          src={`/image/sun.svg`}
+          src={`/static/image/sun.svg`}
           alt="moon"
           width={27}
           height={27}
