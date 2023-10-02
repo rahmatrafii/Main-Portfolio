@@ -82,7 +82,7 @@ const Home = () => {
             }`}
           >
             <Image
-              src="/image/rafi.png"
+              src="/static/image/rafi.png"
               alt="rafi"
               className={styles.home__image__content__inner}
               width={60}
@@ -106,7 +106,9 @@ const Home = () => {
           >
             <p>Scroll Down</p>
             <Image
-              src={`/image/bottom-${theme === "light" ? "light" : "dark"}.svg`}
+              src={`/static/image/bottom-${
+                theme === "light" ? "light" : "dark"
+              }.svg`}
               className={styles.home__scrolldown__icon}
               alt="bottom"
               width={24}

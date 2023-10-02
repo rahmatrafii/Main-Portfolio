@@ -14,7 +14,7 @@ const ThemeButton = ({ theme, onClick = () => {} }: ThemeButtonType) => {
         <Image
           className={` 
                 toggle-dark-${theme === "light" ? "active" : "noactive"}`}
-          src={`/image/moon.svg`}
+          src={`/static/image/moon.svg`}
           alt="moon"
           width={27}
           height={27}
