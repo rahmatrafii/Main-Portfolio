@@ -47,7 +47,10 @@ const Header = () => {
   }, [scrollPosition]);
   return (
     <>
-      <header
+      <motion.header
+        variants={navVariants}
+        initial="hidden"
+        whileInView={"show"}
         className={`${styles.header} ${
           isScrolled && theme === "light"
             ? "header-scrolled-light"
@@ -57,12 +60,7 @@ const Header = () => {
         }`}
         ref={headerRef}
       >
-        <motion.div
-          variants={navVariants}
-          initial="hidden"
-          whileInView={"show"}
-          className={styles.header__container}
-        >
+        <div className={styles.header__container}>
           <div
             onClick={() => (window.location.href = "/")}
             className={`${styles.header__container__logo} text-main-${
@@ -101,8 +99,8 @@ const Header = () => {
             <span></span>
             <span></span>
           </button>
-        </motion.div>
-      </header>
+        </div>
+      </motion.header>
       <MobileNav active={active} sidebar={sidebar} setSidebar={setSidebar} />
     </>
   );
