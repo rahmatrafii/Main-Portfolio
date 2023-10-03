@@ -50,13 +50,13 @@ const Header = () => {
       <motion.header
         variants={navVariants}
         initial="hidden"
-        whileInView={"show"}
+        whileInView="show"
         className={`${styles.header} ${
           isScrolled && theme === "light"
             ? "header-scrolled-light"
             : isScrolled && theme === "dark"
             ? "header-scrolled-dark"
-            : ""
+            : "background-transparent"
         }`}
         ref={headerRef}
       >

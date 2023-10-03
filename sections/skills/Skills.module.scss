@@ -5,13 +5,14 @@
 }
 .container {
   padding-top: 95px;
-  width: 100%;
+  width: 100vw;
   display: flex;
+  height: 100%;
   align-items: start;
   justify-content: center;
   .skills {
     width: 100%;
-    height: max-content;
+    height: 100%;
     &__desc {
       margin-bottom: 40px;
       font-size: 18px;
