@@ -124,6 +124,30 @@ export const portfolio = {
       github: "https://github.com/rahmatrafii/rafi-travel",
       description: "",
     },
+    {
+      title: "Music Player",
+      src: "/static/image/music-player.png",
+      techStack: ["Reactjs", "TailwindCSS", "TypeScript", "Redux"],
+      link: "https://rafi-musik-player.vercel.app/",
+      github: "https://github.com/rahmatrafii/Music-player",
+      description: "",
+    },
+    {
+      title: "My Portfolio",
+      src: "/static/image/portfolio.png",
+      techStack: ["Nextjs", "SASS", "TypeScript"],
+      link: "https://rahmatrafiindrayani.vercel.app/",
+      github: "https://github.com/rahmatrafii/Main-Portfolio",
+      description: "",
+    },
+    {
+      title: "Car Showcase",
+      src: "/static/image/car-showcase.png",
+      techStack: ["Nextjs", "TailwindCSS", "TypeScript"],
+      link: "https://rafi-car-showcase.vercel.app/",
+      github: "https://github.com/rahmatrafii/car-showcase",
+      description: "",
+    },
   ],
 };
 export const contact = {
