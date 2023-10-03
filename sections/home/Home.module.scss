@@ -2,18 +2,17 @@ $paragraph-color: #a9a9a9;
 $main-color: #618af5;
 
 .container {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   display: flex;
   align-items: start;
   justify-content: center;
   .home {
     position: relative;
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     margin: 0 auto;
+    justify-content: center;
     &__info {
       width: 60%;
       height: max-content;
