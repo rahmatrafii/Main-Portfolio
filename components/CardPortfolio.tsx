@@ -14,7 +14,10 @@ const CardPortfolio = ({ index, theme, ...item }: CardPortfolioType) => {
   return (
     <>
       <motion.div
-        variants={fadeIn("right", "spring", index * 0.5, 1)}
+        variants={fadeIn("right", "spring", Number(`0.${5 + index * 4}`), 1)}
+        whileInView={"show"}
+        initial="hidden"
+        viewport={{ once: true, amount: 0.25 }}
         className={`${styles.card} ${
           theme === "light" ? "bg-light text-light" : "bg-skills-dark text-dark"
         }`}

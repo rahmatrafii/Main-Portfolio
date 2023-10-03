@@ -1,6 +1,6 @@
 "use client";
 import { FaDownload } from "react-icons/fa";
-import styles from "./Home.module.scss";
+import styles from "@/app/page.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -12,7 +12,7 @@ const Home = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <section className={styles.container} id="home">
+    <section className={styles.home__container} id="home">
       <motion.div
         variants={staggerContainer}
         whileInView="show"

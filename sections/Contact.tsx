@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import ContactCard from "@/components/ContactCard";
-import styles from "./Contact.module.scss";
+import styles from "@/app/page.module.scss";
 import { contact } from "@/constant/index";
 import Input from "@/components/Input";
 import Textarea from "@/components/Textarea";
@@ -10,12 +10,11 @@ import { useContext, useState } from "react";
 import emailjs from "@emailjs/browser";
 import TitleSection from "@/components/TitleSection";
 import { motion } from "framer-motion";
-import Swal from "sweetalert2";
 import { staggerContainer, textVariant, zoomIn } from "@/utils/motion";
+
 const Contact = () => {
   const [fullNameInput, setFullNameInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
-  const [subjectInput, setSubjectInput] = useState("");
   const [messageInput, setMessageInput] = useState("");
   const { theme, setNavActive } = useContext(ThemeContext);
   const [feedback, setFeedback] = useState({
@@ -37,7 +36,6 @@ const Contact = () => {
     const clearFormAfterSubmit = () => {
       setFullNameInput("");
       setEmailInput("");
-      setSubjectInput("");
       setMessageInput("");
     };
 
@@ -102,13 +100,17 @@ const Contact = () => {
       const contactPosition = contactRef.current.offsetTop;
       setNavActive((prev: any) => ({
         ...prev,
-        contact: contactPosition - 150,
+        contact: contactPosition - 250,
       }));
     }
   }, []);
   return (
     <>
-      <section ref={contactRef} className={styles.container} id="contact">
+      <section
+        ref={contactRef}
+        className={styles.contact__container}
+        id="contact"
+      >
         <motion.div
           variants={staggerContainer}
           initial="hidden"

@@ -1,5 +1,5 @@
 import CardPortfolio from "@/components/CardPortfolio";
-import styles from "./Portfolio.module.scss";
+import styles from "@/app/page.module.scss";
 import { useContext, useEffect, useRef } from "react";
 import { ThemeContext } from "@/context/themeContext";
 import { portfolio } from "@/constant";
@@ -20,17 +20,18 @@ const Portfolio = () => {
     }
   }, []);
   return (
-    <section ref={portfolioRef} className={styles.container} id="portfolio">
-      <motion.div
-        className={styles.portfolio}
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
-      >
+    <section
+      ref={portfolioRef}
+      className={styles.portfolio__container}
+      id="portfolio"
+    >
+      <motion.div className={styles.portfolio} variants={staggerContainer}>
         <TitleSection title={portfolio.title} />
         <motion.p
           variants={textVariant(0.5)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
           className={`${styles.portfolio__desc} text-${
             theme === "light" ? "light" : "dark"
           }`}

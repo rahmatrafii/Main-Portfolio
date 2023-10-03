@@ -1,5 +1,5 @@
 "use client";
-import styles from "./Skills.module.scss";
+import styles from "@/app/page.module.scss";
 import SkillsIcon from "@/components/SkillsIcon";
 import { mySkills } from "@/constant";
 import { BiCodeAlt } from "react-icons/bi";
@@ -24,7 +24,7 @@ const Skills = () => {
     }
   }, []);
   return (
-    <section className={styles.container} ref={skillRef} id="skills">
+    <section className={styles.skills__container} ref={skillRef} id="skills">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
