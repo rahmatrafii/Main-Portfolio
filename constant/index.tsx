@@ -5,6 +5,7 @@ export const identity = {
   description: [
     "Saya seorang Frontend web Developer, Saya selalu mencari kesempatan untuk memperluas wawasan dan mempelajari hal-hal baru, karena saya yakin dengan belajar terus menerus kita bisa menciptakan aplikasi digital yang inovatif dan bermanfaat bagi banyak orang di masa depan.",
   ],
+  imgae: "/static/image/rafi.png",
 };
 
 export const mySkills = {
@@ -44,6 +45,10 @@ export const mySkills = {
       title: "SASS",
       src: "/static/image/sass.svg",
     },
+    {
+      title: "Vite",
+      src: "/static/image/vite.svg",
+    },
   ],
   tools: [
     {
@@ -82,60 +87,70 @@ export const link = [
     src: "#contact",
   },
 ];
-export const portfolio = [
-  {
-    title: "Youtube Clone",
-    src: "/static/image/youtube.png",
-    techStack: ["Nextjs", "TypeScript", "TailwindCSS"],
-    link: "https://rafi-youtube-clone.vercel.app/",
-    github: "https://github.com/rahmatrafii/youtube-clone",
-    description: "",
-  },
-  {
-    title: "Travel Landing Page",
-    src: "/static/image/travel.png",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    link: "https://rafi-travel.vercel.app/",
-    github: "https://github.com/rahmatrafii/rafi-travel",
-    description: "",
-  },
-  {
-    title: "Aplikasi Pencarian Filem",
-    src: "/static/image/movie.png",
-    techStack: ["Nextjs", "TypeScript", "TailwindCSS"],
-    link: "https://rafmovies.vercel.app/",
-    github: "https://github.com/rahmatrafii/rafi-travel",
-    description: "",
-  },
-  {
-    title: "Aplikasi Pencarian Resep",
-    src: "/static/image/recipe.png",
-    techStack: ["Reactjs", "TailwindCSS"],
-    link: "https://rafi-recipe-app.vercel.app/",
-    github: "https://github.com/rahmatrafii/rafi-travel",
-    description: "",
-  },
-];
-export const ContactButton = [
-  {
-    title: "Gmail",
-    icon: "/static/image/gmail.svg",
-    link: "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=rahmatrafiindrayani@gmail.com&su=&body=",
-    body: "rahmatrafiindrayani@gmail.com",
-  },
-  {
-    title: "WhatsApp",
-    icon: "/static/image/whatsapp.svg",
-    link: "https://wa.me/+62881026908422",
-    body: "+62 881026908422",
-  },
-  {
-    title: "Telegram",
-    icon: "/static/image/telegram.svg",
-    link: "https://t.me/+62881026908422",
-    body: "+62 881026908422",
-  },
-];
+export const portfolio = {
+  title: "PortFolio",
+  desc: `I've created a few project while i was learing about frontend website
+  development. and all of project i'll explain below`,
+  projects: [
+    {
+      title: "Youtube Clone",
+      src: "/static/image/youtube.png",
+      techStack: ["Nextjs", "TypeScript", "TailwindCSS"],
+      link: "https://rafi-youtube-clone.vercel.app/",
+      github: "https://github.com/rahmatrafii/youtube-clone",
+      description: "",
+    },
+    {
+      title: "Travel Landing Page",
+      src: "/static/image/travel.png",
+      techStack: ["HTML", "CSS", "JavaScript"],
+      link: "https://rafi-travel.vercel.app/",
+      github: "https://github.com/rahmatrafii/rafi-travel",
+      description: "",
+    },
+    {
+      title: "Aplikasi Pencarian Filem",
+      src: "/static/image/movie.png",
+      techStack: ["Nextjs", "TypeScript", "TailwindCSS"],
+      link: "https://rafmovies.vercel.app/",
+      github: "https://github.com/rahmatrafii/rafi-travel",
+      description: "",
+    },
+    {
+      title: "Aplikasi Pencarian Resep",
+      src: "/static/image/recipe.png",
+      techStack: ["Reactjs", "TailwindCSS"],
+      link: "https://rafi-recipe-app.vercel.app/",
+      github: "https://github.com/rahmatrafii/rafi-travel",
+      description: "",
+    },
+  ],
+};
+export const contact = {
+  title: "ContactMe",
+  desc: ` I'am always open to discussing product design, collaborating work or
+  partnerships. Just contact me with this media below`,
+  contactButton: [
+    {
+      title: "Gmail",
+      icon: "/static/image/gmail.svg",
+      link: "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=rahmatrafiindrayani@gmail.com&su=&body=",
+      body: "rahmatrafiindrayani@gmail.com",
+    },
+    {
+      title: "WhatsApp",
+      icon: "/static/image/whatsapp.svg",
+      link: "https://wa.me/+62881026908422",
+      body: "+62 881026908422",
+    },
+    {
+      title: "Telegram",
+      icon: "/static/image/telegram.svg",
+      link: "https://t.me/+62881026908422",
+      body: "+62 881026908422",
+    },
+  ],
+};
 export const sosmed = [
   {
     title: "instagram",

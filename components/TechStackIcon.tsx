@@ -7,7 +7,7 @@ const TechStackIcon = ({ techStack }: { techStack: string[] }) => {
       {techStack.map((item: string) => (
         <div key={item} className={styles.techstack__icon}>
           <Image
-            src={`/image/${item.toLowerCase()}.svg`}
+            src={`/static/image/${item.toLowerCase()}.svg`}
             alt="nextjs"
             width={20}
             height={20}

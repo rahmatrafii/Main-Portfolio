@@ -1,6 +1,6 @@
 import CardPortfolio from "@/components/CardPortfolio";
 import styles from "./Portfolio.module.scss";
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { ThemeContext } from "@/context/themeContext";
 import { portfolio } from "@/constant";
 import TitleSection from "@/components/TitleSection";
@@ -8,10 +8,19 @@ import { motion } from "framer-motion";
 import { staggerContainer, textVariant } from "@/utils/motion";
 
 const Portfolio = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
-
+  const { theme, setNavActive } = useContext(ThemeContext);
+  const portfolioRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (portfolioRef.current) {
+      const portfolioPosition = portfolioRef.current.offsetTop;
+      setNavActive((prev: any) => ({
+        ...prev,
+        portfolio: portfolioPosition - 150,
+      }));
+    }
+  }, []);
   return (
-    <section className={styles.container} id="portfolio">
+    <section ref={portfolioRef} className={styles.container} id="portfolio">
       <motion.div
         className={styles.portfolio}
         variants={staggerContainer}
@@ -19,18 +28,17 @@ const Portfolio = () => {
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
       >
-        <TitleSection title="Portfolio" />
+        <TitleSection title={portfolio.title} />
         <motion.p
           variants={textVariant(0.5)}
           className={`${styles.portfolio__desc} text-${
             theme === "light" ? "light" : "dark"
           }`}
         >
-          I've created a few project while i was learing about frontend website
-          development. and all of project i'll explain below
+          {portfolio.desc}
         </motion.p>
         <div className={styles.portfolio__content}>
-          {portfolio.map((item, index) => (
+          {portfolio.projects.map((item, index) => (
             <CardPortfolio
               key={item.title}
               index={index}

@@ -47,3 +47,15 @@ export interface ThemeButtonType {
   theme: string;
   onClick: React.ReactEventHandler;
 }
+export interface contextThemeType {
+  theme: string;
+  toggleTheme: () => void;
+  navActive: NavActiveType;
+  setNavActive: React.Dispatch<React.SetStateAction<NavActiveType>>;
+}
+export interface NavActiveType {
+  skills: number;
+  portfolio: number;
+  contact: number;
+}
+export type activeLinkType = "Home" | "Skills" | "Portfolio" | "Contact";

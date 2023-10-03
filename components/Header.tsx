@@ -3,7 +3,6 @@ type LinkType = {
   title: string;
   src: string;
 };
-type activeLinkType = "Home" | "Skills" | "Portfolio" | "Contact";
 import { link } from "@/constant/index";
 import styles from "@/app/page.module.scss";
 import Link from "next/link";
@@ -13,25 +12,28 @@ import MobileNav from "./MobileNav";
 import { motion } from "framer-motion";
 import ThemeButton from "./ThemeButton";
 import { navVariants } from "@/utils/motion";
+import { useSetNavActive } from "@/hooks/useSetNavActive";
+import { activeLinkType } from "@/types";
+
 const Header = () => {
   const headerRef = useRef<HTMLHeadElement>(null);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [active, setActive] = useState<activeLinkType>("Home");
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme, navActive } = useContext(ThemeContext);
   const [sidebar, setSidebar] = useState(false);
 
   useEffect(() => {
     const currentPosition = window.scrollY;
     setScrollPosition(currentPosition);
-    currentPosition > 50 && setIsScrolled(true);
+    currentPosition > 1 && setIsScrolled(true);
   }, []);
 
   useEffect(() => {
     function handleScroll() {
       const currentPosition = window.scrollY;
       setScrollPosition(currentPosition);
-      currentPosition > 50 ? setIsScrolled(true) : setIsScrolled(false);
+      currentPosition > 1 ? setIsScrolled(true) : setIsScrolled(false);
     }
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -40,18 +42,8 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    if (scrollPosition >= 0) {
-      setActive("Home");
-    }
-    if (scrollPosition > 300) {
-      setActive("Skills");
-    }
-    if (scrollPosition > 900) {
-      setActive("Portfolio");
-    }
-    if (scrollPosition > 1500) {
-      setActive("Contact");
-    }
+    const isActive = useSetNavActive(scrollPosition, navActive);
+    setActive(isActive);
   }, [scrollPosition]);
   return (
     <>

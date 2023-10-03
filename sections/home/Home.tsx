@@ -82,7 +82,7 @@ const Home = () => {
             }`}
           >
             <Image
-              src="/static/image/rafi.png"
+              src={identity.imgae}
               alt="rafi"
               className={styles.home__image__content__inner}
               width={60}

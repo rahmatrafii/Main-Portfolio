@@ -1,8 +1,8 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import ContactCard from "@/components/ContactCard";
 import styles from "./Contact.module.scss";
-import { ContactButton } from "@/constant/index";
+import { contact } from "@/constant/index";
 import Input from "@/components/Input";
 import Textarea from "@/components/Textarea";
 import { ThemeContext } from "@/context/themeContext";
@@ -17,7 +17,7 @@ const Contact = () => {
   const [emailInput, setEmailInput] = useState("");
   const [subjectInput, setSubjectInput] = useState("");
   const [messageInput, setMessageInput] = useState("");
-  const { theme } = useContext(ThemeContext);
+  const { theme, setNavActive } = useContext(ThemeContext);
   const [feedback, setFeedback] = useState({
     show: false,
     success: false,
@@ -40,11 +40,6 @@ const Contact = () => {
       setSubjectInput("");
       setMessageInput("");
     };
-
-    if (buttonRef.current) {
-      buttonRef.current.style.opacity = "0";
-      console.log("hai");
-    }
 
     if (fullNameInput.length <= 0) {
       setValidate({
@@ -100,9 +95,20 @@ const Contact = () => {
       setFeedback((prev) => ({ ...prev, show: false }));
     }, 6000);
   };
+
+  const contactRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (contactRef.current) {
+      const contactPosition = contactRef.current.offsetTop;
+      setNavActive((prev: any) => ({
+        ...prev,
+        contact: contactPosition - 150,
+      }));
+    }
+  }, []);
   return (
     <>
-      <section className={styles.container} id="contact">
+      <section ref={contactRef} className={styles.container} id="contact">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -110,19 +116,18 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.25 }}
           className={styles.contact}
         >
-          <TitleSection title="Contact" />
+          <TitleSection title={contact.title} />
           <motion.p
             variants={textVariant(0.3)}
             className={`${styles.contact__desc} text-${
               theme === "light" ? "light" : "dark"
             }`}
           >
-            I'am always open to discussing product design, collaborating work or
-            partnerships. Just contact me with this media below
+            {contact.desc}
           </motion.p>
           <div className={styles.contact__content}>
             <div className={styles.contact__content__button}>
-              {ContactButton.map((item, index) => (
+              {contact.contactButton.map((item, index) => (
                 <ContactCard
                   key={item.title}
                   icon={item.icon}

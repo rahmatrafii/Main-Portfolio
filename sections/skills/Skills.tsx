@@ -4,16 +4,27 @@ import SkillsIcon from "@/components/SkillsIcon";
 import { mySkills } from "@/constant";
 import { BiCodeAlt } from "react-icons/bi";
 import { RiToolsLine } from "react-icons/ri";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ThemeContext } from "@/context/themeContext";
 import TitleSection from "@/components/TitleSection";
 import { fadeIn, staggerContainer, textVariant } from "@/utils/motion";
 import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const Skills = () => {
-  const { theme } = useContext(ThemeContext);
+  const { theme, setNavActive } = useContext(ThemeContext);
+  const skillRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (skillRef.current) {
+      const skillPosition = skillRef.current.offsetTop;
+      setNavActive((prev: any) => ({
+        ...prev,
+        skills: skillPosition - 150,
+      }));
+    }
+  }, []);
   return (
-    <section className={styles.container} id="skills">
+    <section className={styles.container} ref={skillRef} id="skills">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
