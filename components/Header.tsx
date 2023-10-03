@@ -11,7 +11,7 @@ import { ThemeContext } from "@/context/themeContext";
 import MobileNav from "./MobileNav";
 import { motion } from "framer-motion";
 import ThemeButton from "./ThemeButton";
-import { navVariants } from "@/utils/motion";
+import { fadeIn, navVariants } from "@/utils/motion";
 import { useSetNavActive } from "@/hooks/useSetNavActive";
 import { activeLinkType } from "@/types";
 
@@ -60,7 +60,10 @@ const Header = () => {
         }`}
         ref={headerRef}
       >
-        <div className={styles.header__container}>
+        <motion.div
+          className={styles.header__container}
+          variants={fadeIn("down", "tween", 0.3, 0.75)}
+        >
           <div
             onClick={() => (window.location.href = "/")}
             className={`${styles.header__container__logo} text-main-${
@@ -99,7 +102,7 @@ const Header = () => {
             <span></span>
             <span></span>
           </button>
-        </div>
+        </motion.div>
       </motion.header>
       <MobileNav active={active} sidebar={sidebar} setSidebar={setSidebar} />
     </>
