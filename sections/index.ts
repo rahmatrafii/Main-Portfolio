@@ -1,6 +1,6 @@
-import Contact from "./contact/Contact";
-import Home from "./home/Home";
-import Skills from "./skills/Skills";
-import Portfolio from "./portfolio/Portfolio";
+import Contact from "./Contact";
+import Home from "./Home";
+import Skills from "./Skills";
+import Portfolio from "./Portfolio";
 
 export { Home, Skills, Portfolio, Contact };

@@ -31,7 +31,7 @@ export interface InputType {
 }
 
 export interface MobileNav {
-  active: "Home" | "Skills" | "Portfolio" | "Contact";
+  active: activeLinkType;
   sidebar: boolean;
   setSidebar: Function;
 }
@@ -55,7 +55,13 @@ export interface contextThemeType {
 }
 export interface NavActiveType {
   skills: number;
+  about: number;
   portfolio: number;
   contact: number;
 }
-export type activeLinkType = "Home" | "Skills" | "Portfolio" | "Contact";
+export type activeLinkType =
+  | "Home"
+  | "About"
+  | "Skills"
+  | "Portfolio"
+  | "Contact";

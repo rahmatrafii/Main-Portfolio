@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --main-color-light: #3c73ff;
+  --main-color-dark: #0048ff;
+  --bg-dark-color: #0e1b31;
+  --bg-card-dark-color: #20345b;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,6 +17,9 @@
 *::-webkit-scrollbar {
   width: 7px;
   height: 5px;
+}
+title {
+  color: #0048ff;
 }
 html {
   scroll-behavior: smooth;
@@ -30,14 +41,14 @@ body {
 }
 
 .link-active-light {
-  color: #3c73ff;
-  border-top: 2px solid #3c73ff;
-  border-bottom: 2px solid #3c73ff;
+  color: var(--main-color-light);
+  border-top: 2px solid var(--main-color-light);
+  border-bottom: 2px solid var(--main-color-light);
 }
 .link-active-dark {
-  color: #0048ff;
-  border-top: 2px solid #0048ff;
-  border-bottom: 2px solid #0048ff;
+  color: var(--main-color-dark);
+  border-top: 2px solid var(--main-color-dark);
+  border-bottom: 2px solid var(--main-color-dark);
 }
 .link-noactive {
   border-bottom: 2px solid transparent;
@@ -63,16 +74,16 @@ body {
 }
 
 .text-main-light {
-  color: #3c73ff;
+  color: var(--main-color-light);
 }
 .text-main-dark {
-  color: #0048ff;
+  color: var(--main-color-dark);
 }
 .bg-main-light {
-  background-color: #3c73ff;
+  background-color: var(--main-color-light);
 }
 .bg-main-dark {
-  background-color: #0048ff;
+  background-color: var(--main-color-dark);
 }
 .text-dark {
   color: white;
@@ -85,7 +96,7 @@ body {
   background: white;
 }
 .bg-dark {
-  background: #0e1b31;
+  background: var(--bg-dark-color);
 }
 .toggle-light-active {
   transform: translateY(200%);
@@ -128,32 +139,37 @@ body {
 }
 
 .sidebarDark {
-  background: #0e1b31;
+  background: var(--bg-dark-color);
 }
 
 .bg-skills-dark {
-  background: #20345b;
+  background: var(--bg-card-dark-color);
 }
-
+.border-light {
+  border: 2px solid var(--main-color-light);
+}
+.border-dark {
+  border: 2px solid var(--main-color-dark);
+}
 /* skills */
 .button-light {
-  border: 2px solid #3c73ff;
-  color: #3c73ff;
+  border: 2px solid var(--main-color-light);
+  color: var(--main-color-light);
 }
 .button-light:hover {
-  border: 2px solid #3c73ff;
+  border: 2px solid var(--main-color-light);
   color: white;
-  background: #3c73ff;
+  background: var(--main-color-light);
 }
 .button-dark {
-  border: 2px solid #0048ff;
-  color: #0048ff;
+  border: 2px solid var(--main-color-dark);
+  color: var(--main-color-dark);
   background: transparent;
 }
 .button-dark:hover {
   border: 2px solid rgb(0, 72, 255);
   color: white;
-  background: #0048ff;
+  background: var(--main-color-dark);
 }
 .icon-light {
   box-shadow: 0px 6px 6px rgba(97, 138, 245, 0.9);
@@ -182,10 +198,10 @@ body {
   color: white;
 }
 .portfolio-title-light:hover {
-  color: #3c73ff;
+  color: var(--main-color-light);
 }
 .portfolio-title-dark:hover {
-  color: #0048ff;
+  color: var(--main-color-dark);
 }
 
 .modalHide {
@@ -223,11 +239,11 @@ body {
 
 .custom-scrollbar-dark::-webkit-scrollbar-thumb {
   border-radius: 50px;
-  background: #0048ff;
+  background: var(--main-color-dark);
 }
 .custom-scrollbar-light::-webkit-scrollbar-thumb {
   border-radius: 50px;
-  background: #3c73ff;
+  background: var(--main-color-light);
 }
 
 .modal-dark {
@@ -243,46 +259,46 @@ body {
   background: white;
 }
 .modal-content-dark {
-  background: #0e1b31;
+  background: var(--bg-dark-color);
   color: white;
 }
 .contact-card-light {
-  border: 3px solid #618af5;
+  border: 3px solid var(--main-color-light);
   background: white;
 }
 .contact-card-dark {
-  border: 3px solid #0048ff;
-  background: #20345b;
+  border: 3px solid var(--main-color-dark);
+  background: var(--bg-card-dark-color);
 }
 .input-light {
-  border: 3px solid #618af5;
+  border: 3px solid var(--main-color-light);
   background: #ffffff;
   color: black;
 }
 .input-dark {
-  border: 3px solid #0048ff;
-  background: #20345b;
+  border: 3px solid var(--main-color-dark);
+  background: var(--bg-card-dark-color);
   color: white;
 }
 .sosmed-icon-light {
-  border: 2px solid #618af5;
-  color: #618af5;
+  border: 2px solid var(--main-color-light);
+  color: var(--main-color-light);
   transition: all 0.3s;
 }
 .sosmed-icon-light:hover {
   border: 2px solid white;
   color: white;
-  background: #618af5;
+  background: var(--main-color-light);
 }
 .sosmed-icon-dark {
-  border: 2px solid #0048ff;
-  color: #0048ff;
+  border: 2px solid var(--main-color-dark);
+  color: var(--main-color-dark);
   transition: all 0.3s;
 }
 .sosmed-icon-dark:hover {
   border: 2px solid white;
   color: white;
-  background: #0048ff;
+  background: var(--main-color-dark);
 }
 
 @media (max-width: 575px) {

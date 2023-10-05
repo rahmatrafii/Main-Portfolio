@@ -9,6 +9,9 @@ const TitleSection = ({ title }: { title: string }) => {
   return (
     <motion.p
       variants={textContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
       className={`${styles.title__section} ${
         theme === "light" ? "text-light" : "text-dark"
       }`}

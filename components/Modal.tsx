@@ -68,23 +68,7 @@ const Modal = ({ showModal, setShowModal, ...item }: ModalType) => {
           <h1 className={styles.modal__content__inner__title}>{item.title}</h1>
           <TechStackIcon techStack={item.techStack} />
           <p className={styles.modal__content__inner__desc}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-            magnam, totam repudiandae nesciunt aliquid, aspernatur illo
-            voluptatibus itaque recusandae, deserunt a velit sint officia
-            adipisci. Repudiandae laudantium sequi tempora nobis. Quisquam nulla
-            doloremque atque tenetur debitis explicabo provident iste quidem
-            incidunt. Quas, saepe eos dignissimos cum ipsam, minus recusandae
-            debitis amet delectus dolore ad! Sint repudiandae sed neque nostrum
-            aspernatur pariatur consequatur? Alias enim repudiandae, veniam quia
-            unde architecto ab incidunt impedit! Ipsum tenetur magni facere sint
-            necessitatibus unde similique rerum esse reiciendis aut nam dolorem
-            natus quibusdam, autem beatae velit veritatis libero dignissimos
-            culpa laboriosam t delectus dolore ad! Sint repudiandae sed neque
-            nostrum aspernatur pariatur consequatur? Alias enim repudiandae,
-            veniam quia unde architecto ab incidunt impedit! Ipsum tenetur magni
-            facere sint necessitatibus unde similique rerum esse reiciendis aut
-            nam dolorem natus quibusdam, autem beatae velit veritatis libero
-            dignissimos culpa laboriosam
+            {item.description}
           </p>
           <div className={styles.modal__content__inner__button}>
             <Link
