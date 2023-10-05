@@ -100,10 +100,11 @@ const Contact = () => {
       const contactPosition = contactRef.current.offsetTop;
       setNavActive((prev: any) => ({
         ...prev,
-        contact: contactPosition - 250,
+        contact: contactPosition - 350,
       }));
     }
   }, []);
+
   return (
     <>
       <section

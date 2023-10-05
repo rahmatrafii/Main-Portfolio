@@ -18,6 +18,9 @@
   width: 7px;
   height: 5px;
 }
+title {
+  color: #0048ff;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -142,7 +145,12 @@ body {
 .bg-skills-dark {
   background: var(--bg-card-dark-color);
 }
-
+.border-light {
+  border: 2px solid var(--main-color-light);
+}
+.border-dark {
+  border: 2px solid var(--main-color-dark);
+}
 /* skills */
 .button-light {
   border: 2px solid var(--main-color-light);

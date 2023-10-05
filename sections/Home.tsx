@@ -22,16 +22,16 @@ const Home = () => {
       >
         <div className={styles.home__info}>
           <motion.h4
-            variants={textVariant(0.3)}
+            variants={textVariant(0.5)}
             viewport={{ once: true, amount: 0.25 }}
             initial="hidden"
             whileInView={"show"}
             className={styles.home__info__hello}
           >
-            Hallo 👋 Saya
+            Hi, 👋 I'm
           </motion.h4>
           <motion.h1
-            variants={textVariant(0.5)}
+            variants={textVariant(0.7)}
             viewport={{ once: true, amount: 0.25 }}
             initial="hidden"
             whileInView={"show"}
@@ -42,7 +42,7 @@ const Home = () => {
             {identity.name}
           </motion.h1>
           <motion.h3
-            variants={textVariant(0.7)}
+            variants={textVariant(0.9)}
             viewport={{ once: true, amount: 0.25 }}
             initial="hidden"
             whileInView={"show"}
@@ -54,15 +54,17 @@ const Home = () => {
           </motion.h3>
 
           <motion.p
-            variants={textVariant(0.9)}
+            variants={textVariant(1.2)}
             viewport={{ once: true, amount: 0.25 }}
             initial="hidden"
             whileInView={"show"}
             className={styles.home__info__about}
           >
-            {identity.description}
+            {identity.description[0]}
           </motion.p>
-          <motion.button
+          <motion.a
+            href="/cv/CV - Rahmat Rafi Indrayani.pdf"
+            download
             variants={zoomIn(1, 1)}
             className={`${styles.home__info__button} bg-main-${
               theme === "light" ? "light" : "dark"
@@ -70,29 +72,25 @@ const Home = () => {
           >
             <span>Download CV</span>
             <FaDownload />
-          </motion.button>
+          </motion.a>
         </div>
         <motion.div
-          variants={slideIn("right", "tween", 0.8, 1)}
+          variants={slideIn("right", "tween", 0.2, 1)}
           className={styles.home__image}
         >
-          <div
-            className={`${styles.home__image__content} bg-main-${
-              theme === "light" ? "light" : "dark"
-            }`}
-          >
-            <Image
-              src={identity.imgae}
+          <div className={`${styles.home__image__content}`}>
+            <img
+              src={`/static/image/${
+                theme === "light" ? "light" : "dark"
+              }-rafi.svg`}
               alt="rafi"
               className={styles.home__image__content__inner}
-              width={60}
-              height={60}
             />
           </div>
         </motion.div>
 
         <Link
-          href="#skills"
+          href="#about"
           className={`${styles.home__scrolldown} text-main-${
             theme === "light" ? "light" : "dark"
           }`}

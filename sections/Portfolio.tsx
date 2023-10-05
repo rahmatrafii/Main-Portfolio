@@ -1,3 +1,4 @@
+"use client";
 import CardPortfolio from "@/components/CardPortfolio";
 import styles from "@/app/page.module.scss";
 import { useContext, useEffect, useRef } from "react";

@@ -45,6 +45,7 @@ const Header = () => {
     const isActive = useSetNavActive(scrollPosition, navActive);
     setActive(isActive);
   }, [scrollPosition]);
+  console.log(active);
   return (
     <>
       <motion.header

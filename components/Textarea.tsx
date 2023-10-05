@@ -17,7 +17,7 @@ const Textarea = (props: InputType) => {
       className={styles.textarea__container}
     >
       <label
-        id={id}
+        htmlFor={id}
         className={`${styles.textarea__container__label} text-main-${
           theme === "light" ? "light" : "dark"
         }`}
@@ -26,6 +26,7 @@ const Textarea = (props: InputType) => {
       </label>
       <textarea
         ref={inputRef}
+        id={id}
         name={id}
         placeholder={placeholder}
         value={value}

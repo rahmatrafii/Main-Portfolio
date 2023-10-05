@@ -42,10 +42,7 @@ const CardPortfolio = ({ index, theme, ...item }: CardPortfolioType) => {
           <span>{item.title}</span>
         </Link>
         <TechStackIcon techStack={item.techStack} />
-        <p className={styles.card__desc}>
-          Lorem ipsum dolor, sit amet consectetur elit. at odit perspiciatis
-          fugiat et!...
-        </p>
+        <p className={styles.card__desc}>{item.description.slice(0, 65)}...</p>
         <div className={styles.card__button}>
           <button
             className={`${styles.card__button__details} bg-main-${

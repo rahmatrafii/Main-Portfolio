@@ -7,6 +7,7 @@ const ThemeContext = createContext<contextThemeType>({
   toggleTheme: () => {},
   navActive: {
     skills: 0,
+    about: 0,
     portfolio: 0,
     contact: 0,
   },
@@ -26,6 +27,7 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useState<string>("dark");
   const [navActive, setNavActive] = useState<NavActiveType>({
     skills: 0,
+    about: 0,
     portfolio: 0,
     contact: 0,
   });

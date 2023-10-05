@@ -4,8 +4,11 @@ export function useSetNavActive(
   scrollPosition: number,
   navActive: NavActiveType
 ): activeLinkType {
-  if (scrollPosition >= 0 && scrollPosition < navActive.skills) {
+  if (scrollPosition >= 0 && scrollPosition < navActive.about) {
     return "Home";
+  }
+  if (scrollPosition > navActive.about && scrollPosition < navActive.skills) {
+    return "About";
   }
   if (
     scrollPosition > navActive.skills &&
