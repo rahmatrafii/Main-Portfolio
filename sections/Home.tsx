@@ -65,7 +65,7 @@ const Home = () => {
           <motion.a
             href="/cv/CV - Rahmat Rafi Indrayani.pdf"
             download
-            variants={zoomIn(1, 1)}
+            variants={zoomIn(1.7, 1)}
             className={`${styles.home__info__button} bg-main-${
               theme === "light" ? "light" : "dark"
             }`}

@@ -23,13 +23,12 @@ const CardPortfolio = ({ index, theme, ...item }: CardPortfolioType) => {
         }`}
       >
         <Link href={item.link} className={styles.card__image} target="_blank">
-          <Image
+          <img
             className={styles.card__image__content}
             src={item.src}
             alt="portfolio"
             width={100}
             height={100}
-            quality={100}
           />
         </Link>
         <Link

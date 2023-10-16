@@ -98,6 +98,20 @@ export const portfolio = {
   development. and all of project i'll explain below`,
   projects: [
     {
+      title: "SoleChic.Store",
+      src: "/static/image/solechic.png",
+      techStack: ["Nextjs", "TailwindCSS", "TypeScript"],
+      link: "https://solechic.vercel.app/",
+      github: "https://github.com/rahmatrafii/solechic.store",
+      description: `solechic is my e-commerce application, built with Next.js, Tailwind CSS, TypeScript, Sanity, and Firebase technologies. The app not only provides a seamless shopping experience, but also showcases my ability to develop complex and functional web solutions.
+
+        With a login and registration feature via email, as well as a login option using a Google account, solechic offers convenient access for users. Users can easily browse and select quality products stored in Sanity's database, ensuring consistency and accuracy of information.
+        
+        In addition, integration with Stripe enables secure and efficient payment transactions, adding an additional layer of security for customers. Firebase is used to store user data and shopping cart information, ensuring a personalised and connected experience.
+        
+        Solechic is not just about an attractive look and user-friendly interface, but also reflects my dedication to continuous learning and bringing the latest technology solutions. With modern technology as the foundation, this application is a true testament to my ability to design and implement complex web applications.`,
+    },
+    {
       title: "Youtube Clone",
       src: "/static/image/youtube.png",
       techStack: ["Nextjs", "TypeScript", "TailwindCSS"],
@@ -106,7 +120,6 @@ export const portfolio = {
       description:
         "This is a website I made using Nextjs, TypeScript, and TailwindCSS. This website is a clone of YouTube for learning purposes. This website allows users to watch, and search for videos from various categories and channels. This website also has features such as recommendations. This website aims to demonstrate my ability to create complex and functional web applications using modern technologies.",
     },
-
     {
       title: "Recipe App",
       src: "/static/image/recipe.png",
@@ -143,15 +156,6 @@ export const portfolio = {
       description:
         "this is a car showcase website that I created using Nextjs, TypeScript, and TailwindCSS, this website has search features, and filtering by year, fuel and model, This website aims to demonstrate my ability in creating complex and functional web applications using modern technology.",
     },
-    {
-      title: "Travel Landing Page",
-      src: "/static/image/travel.png",
-      techStack: ["HTML", "CSS", "JavaScript"],
-      link: "https://rafi-travel.vercel.app/",
-      github: "https://github.com/rahmatrafii/rafi-travel",
-      description:
-        "Travel is a website that I created using HTML, CSS, and JavaScript. This website provides information on interesting places to visit and offers service offers to the places displayed. This website aims to show my abilities in creating web applications.",
-    },
   ],
 };
 export const contact = {
@@ -180,16 +184,16 @@ export const contact = {
   ],
 };
 export const sosmed = [
-  {
-    title: "instagram",
-    link: "https://www.instagram.com/rahmat_rafi_indrayani",
-    icon: <BsInstagram />,
-  },
-  {
-    title: "facebook",
-    link: "https://web.facebook.com/profile.php?id=100080953104926",
-    icon: <BsFacebook />,
-  },
+  // {
+  //   title: "instagram",
+  //   link: "https://www.instagram.com/rahmat_rafi_indrayani",
+  //   icon: <BsInstagram />,
+  // },
+  // {
+  //   title: "facebook",
+  //   link: "https://web.facebook.com/profile.php?id=100080953104926",
+  //   icon: <BsFacebook />,
+  // },
   {
     title: "LinkedIn",
     link: "https://www.linkedin.com/in/rahmat-rafi-37890b23b",
