@@ -317,9 +317,10 @@ $card-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
 }
 .alert {
   position: fixed;
+  white-space: nowrap;
   left: 50%;
   bottom: 30px;
-  padding: 15px 20px;
+  padding: 10px 15px;
   color: white;
   font-size: 15px;
   border-radius: 5px;
