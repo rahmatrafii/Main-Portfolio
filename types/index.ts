@@ -15,7 +15,6 @@ export interface ModalType extends ProjectsType {
   showModal: boolean;
   setShowModal: Function;
 }
-
 export interface InputType {
   id: string;
   label: string;
@@ -29,20 +28,17 @@ export interface InputType {
     message: string;
   };
 }
-
 export interface MobileNav {
   active: activeLinkType;
   sidebar: boolean;
   setSidebar: Function;
 }
-
 export interface SkillsIconType {
   src: string;
   title: string;
   theme: string;
   index: number;
 }
-
 export interface ThemeButtonType {
   theme: string;
   onClick: React.ReactEventHandler;

@@ -1,9 +1,9 @@
-import { BsInstagram, BsFacebook, BsLinkedin, BsGithub } from "react-icons/bs";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
 export const identity = {
   name: "Rahmat Rafi Indrayani",
   devision: "Frontend Web Developer",
   description: [
-    "I created a website for your business, Junior in web design and development.",
+    "I am Frontend Web Developer, I create websites for your business.",
     "Hi everyone! I am Rahmat Rafi Indrayani, a SMK graduate majoring in Computer and Network Engineering with an interest in programming. I am a highly motivated individual with integrity and strong sense of purpose. As a frontend web developer, I always hope to keep learning new things to create digital applications that can benefit humans in the future.",
   ],
   imgae: "/static/image/rafi.png",
@@ -119,6 +119,15 @@ export const portfolio = {
       github: "https://github.com/rahmatrafii/youtube-clone",
       description:
         "This is a website I made using Nextjs, TypeScript, and TailwindCSS. This website is a clone of YouTube for learning purposes. This website allows users to watch, and search for videos from various categories and channels. This website also has features such as recommendations. This website aims to demonstrate my ability to create complex and functional web applications using modern technologies.",
+    },
+    {
+      title: "Travel Landing Page",
+      src: "/static/image/destizine.png",
+      techStack: ["Reactjs", "TypeScript", "TailwindCSS"],
+      link: "https://destizine.vercel.app",
+      github: "https://github.com/rahmatrafii/Destizine",
+      description:
+        "This is a website that I created using Reactjs, TypeScript, and TailwindCSS, this website allows users to see recommendations for popular Indonesian tourist attractions, this website also has a translation feature into English and Mandarin.  This website aims to show my ability to create a modern and responsive website.",
     },
     {
       title: "Recipe App",
